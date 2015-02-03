@@ -43,7 +43,7 @@ public class ServletAyto extends HttpServlet {
 		PrintWriter out= response.getWriter();
 		 out.println("<html>");
 		 out.println("<body>");
-		 out.println("<h1>Aparcamiento/h1>");
+		 out.println("<h1>Aparcamiento</h1>");
 		 out.println("<h2> La id recibida es " +idaparcamiento+ "</h2>");
 		 out.println("<h2> Latitud es " +latitud+ "</h2>");
 		 out.println("<h2> Longitud es " +longitud+ "</h2>");
