@@ -34,6 +34,9 @@ public class ServletAyto extends HttpServlet {
 		AparcamientoPDVO aparcamiento=new AparcamientoPDVO();
 		aparcamiento=daoObj.getAparcamientoPDbyId(id);
 		
+		request.setAttribute("aparcamiento", aparcamiento);
+		request.getRequestDispatcher("ServletAyto.jsp").forward(request, response);
+		/*
 		String idaparcamiento=String.valueOf(aparcamiento.getId());
 		double latitud=aparcamiento.getLatitud();
 		double longitud=aparcamiento.getLongitud();
@@ -51,6 +54,7 @@ public class ServletAyto extends HttpServlet {
 		 out.println("<h2> EL icono es " +icono+ "</h2>");
 		 out.println("</body>");
 		 out.println("</html>");
+		 */
 	}
 
 	/**
