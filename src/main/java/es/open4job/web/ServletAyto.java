@@ -29,12 +29,27 @@ public class ServletAyto extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Recoge el Id que se le manda desde el formulario URL
 		int id= Integer.parseInt(request.getParameter("id"));
+		
+		/*Creo un objeto de aparcamientoDAO para llamar al metodo que
+		 * me devuelve un aparcamiento entero pasandole la id
+		 */
 		AparcamientoPD_DAO daoObj=new AparcamientoPD_DAO();
+		
+		/*
+		 * Creo un objeto de AparcamientoPDVO que contendrá todos los datos
+		 * del objeto del que le hemos pasado la ID
+		 */
 		AparcamientoPDVO aparcamiento=new AparcamientoPDVO();
 		aparcamiento=daoObj.getAparcamientoPDbyId(id);
-		
+		/*
+		 * Le ponemos un atributo para poder llamarlo desde el JSP
+		 */
 		request.setAttribute("aparcamiento", aparcamiento);
+		/*
+		 * 	Le pasamos el JSP asociado al Servlet
+		 */
 		request.getRequestDispatcher("ServletAyto.jsp").forward(request, response);
 		/*
 		String idaparcamiento=String.valueOf(aparcamiento.getId());
