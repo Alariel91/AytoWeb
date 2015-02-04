@@ -1,7 +1,7 @@
 <html>
 <body>
 <h2>Formulario</h2>
-<form action="./ServletAyto" method="get">
+<form action="./ServletSesion" method="get">
   Escribe la id:
   <input type="text" name="id" value="" />
   <br/>

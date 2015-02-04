@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>prueba.Prueba</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletSesion</servlet-name>
+  	<display-name>ServletSesion</display-name>
+  	<description></description>
+  	<servlet-class>es.open4job.web.ServletSesion</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletSesion2</servlet-name>
+  	<display-name>ServletSesion2</display-name>
+  	<description></description>
+  	<servlet-class>es.open4job.web.ServletSesion2</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletAyto</servlet-name>
   	<url-pattern>/ServletAyto</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>Prueba</servlet-name>
   	<url-pattern>/Prueba</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletSesion</servlet-name>
+  	<url-pattern>/ServletSesion</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletSesion2</servlet-name>
+  	<url-pattern>/ServletSesion2</url-pattern>
   </servlet-mapping>
 </web-app>
