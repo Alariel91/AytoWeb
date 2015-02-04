@@ -44,4 +44,11 @@
   	<servlet-name>ServletSesion2</servlet-name>
   	<url-pattern>/ServletSesion2</url-pattern>
   </servlet-mapping>
+
+  <resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/TestDB</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
 </web-app>
